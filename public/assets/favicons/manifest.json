@@ -1,0 +1,22 @@
+{
+    "name": "Rashhworld - Digital Marketing & Web Development Services",
+    "short_name": "Rashhworld",
+    "description": "Professional digital marketing, web development, and SEO services to help businesses grow online.",
+    "icons": [
+        {
+            "src": "android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "scope": "/",
+    "start_url": "/",
+    "theme_color": "#202123",
+    "background_color": "#ffffff",
+    "display": "fullscreen"
+}
