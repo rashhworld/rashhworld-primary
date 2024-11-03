@@ -275,7 +275,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-white dark:bg-gray-900">
+      <section className="py-20 dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="inline-block mb-6 px-4 py-1 border border-blue-500/30 rounded-full bg-blue-500/10 backdrop-blur-sm">
