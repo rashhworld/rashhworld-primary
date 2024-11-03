@@ -1,19 +1,13 @@
 import React from "react";
-import { services } from "../data";
+import { services } from "@/app/lib/data";
+import { generateMetadata } from "@/app/utils/metadata";
 
-export const metadata = {
+export const metadata = generateMetadata({
   title: "Services",
   description:
     "Explore a comprehensive range of digital marketing, web development, and SEO services designed to boost online presence.",
-  alternates: {
-    canonical: `${process.env.SITE_URL}/services`,
-  },
-  openGraph: {
-    title: "Rashhworld Services",
-    description:
-      "Explore a comprehensive range of digital marketing, web development, and SEO services designed to boost online presence.",
-  },
-};
+  path: "/services",
+});
 
 const ServiceCard = ({ service }) => (
   <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 transition-transform duration-300 hover:scale-105">

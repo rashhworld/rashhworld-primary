@@ -2,22 +2,16 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
-import { projects } from "../data";
-import Skeleton from "../components/Skeleton";
+import { projects } from "@/app/lib/data";
+import { generateMetadata } from "@/app/utils/metadata";
+import Skeleton from "@/app/components/Skeleton";
 
-export const metadata = {
+export const metadata = generateMetadata({
   title: "Portfolio",
   description:
     "View successful digital marketing campaigns and web development projects. See how businesses have grown.",
-  alternates: {
-    canonical: `${process.env.SITE_URL}/projects`,
-  },
-  openGraph: {
-    title: "Rashhworld Portfolio",
-    description:
-      "View successful digital marketing campaigns and web development projects. See how businesses have grown.",
-  },
-};
+  path: "/projects",
+});
 
 const ProjectCard = ({ project }) => (
   <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 flex flex-col h-full">

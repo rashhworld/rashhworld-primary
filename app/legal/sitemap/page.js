@@ -1,13 +1,12 @@
 import Link from "next/link";
-import { navLinks } from "../data";
+import { navLinks } from "@/app/lib/data";
+import { generateMetadata } from "@/app/utils/metadata";
 
-export const metadata = {
+export const metadata = generateMetadata({
   title: "Sitemap",
   description: "Navigate through all pages and services of Rashhworld.",
-  alternates: {
-    canonical: `${process.env.SITE_URL}/sitemap`,
-  },
-};
+  path: "/legal/sitemap",
+});
 
 const SitemapPage = () => {
   return (
@@ -100,8 +99,8 @@ const SitemapPage = () => {
             </h2>
             <ul className="space-y-3">
               {[
-                { title: "Privacy Policy", path: "/privacy" },
-                { title: "Terms of Service", path: "/terms" },
+                { title: "Privacy Policy", path: "/legal/privacy" },
+                { title: "Terms of Service", path: "/legal/terms" },
               ].map((page) => (
                 <li key={page.title}>
                   <Link

@@ -1,80 +1,14 @@
-import { Inter } from "next/font/google";
-import Footer from "./components/Footer";
-import Navbar from "./components/Navbar";
-import JsonLd from "./components/JsonLd";
-import { ThemeProvider } from "./context/ThemeContext";
 import "./globals.css";
+import { Inter } from "next/font/google";
+import Navbar from "@/app/components/Navbar";
+import Footer from "@/app/components/Footer";
+import JsonLd from "@/app/components/JsonLd";
+import { baseMetadata } from "@/app/utils/metadata";
+import { ThemeProvider } from "@/app/context/ThemeContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
-  metadataBase: new URL(process.env.SITE_URL),
-  title: {
-    default: "Rashhworld - Digital Marketing & Web Development Services",
-    template: "%s | Rashhworld",
-  },
-  description:
-    "Professional digital marketing, web development, and SEO services to help businesses grow online. Expert solutions in website design, social media marketing, and brand development.",
-  keywords: [
-    "digital marketing",
-    "web development",
-    "SEO services",
-    "social media marketing",
-    "website design",
-    "brand development",
-    "online marketing",
-    "digital solutions",
-    "business growth",
-    "digital strategy",
-  ],
-  authors: [{ name: "Rashhworld" }],
-  creator: "Rashhworld",
-  publisher: "Rashhworld",
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
-  openGraph: {
-    title: "Rashhworld - Digital Marketing & Web Development Services",
-    description:
-      "Professional digital marketing, web development, and SEO services to help businesses grow online.",
-    url: process.env.SITE_URL,
-    siteName: "Rashhworld",
-    images: [
-      {
-        url: "/assets/images/banner.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Rashhworld Digital Solutions",
-      },
-    ],
-    locale: "en_US",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Rashhworld - Digital Marketing & Web Development Services",
-    description:
-      "Professional digital marketing, web development, and SEO services to help businesses grow online.",
-    images: ["/assets/images/banner.jpg"],
-    creator: "@rashh_sikun",
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
-  verification: {
-    google: "AI_xf3YkT1kAS3nLVaNSWfShTAuUWNcxzLMnt4WrYXs",
-  },
-};
+export const metadata = baseMetadata;
 
 export default function RootLayout({ children }) {
   return (

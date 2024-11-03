@@ -1,10 +1,10 @@
-export const metadata = {
+import { generateMetadata } from "@/app/utils/metadata";
+
+export const metadata = generateMetadata({
   title: "Terms of Service",
   description: "Terms and conditions for using Rashhworld services.",
-  alternates: {
-    canonical: `${process.env.SITE_URL}/terms`,
-  },
-};
+  path: "/legal/terms",
+});
 
 const TermsOfService = () => {
   return (

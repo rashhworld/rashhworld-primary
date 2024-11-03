@@ -1,19 +1,13 @@
-import { contactInfo, socialLinks } from "../data";
 import ContactForm from "./form";
+import { contactInfo, socialLinks } from "@/app/lib/data";
+import { generateMetadata } from "@/app/utils/metadata";
 
-export const metadata = {
+export const metadata = generateMetadata({
   title: "Contact",
   description:
     "Get in touch with Rashhworld for digital marketing and web development needs. Here to help businesses grow.",
-  openGraph: {
-    title: "Contact Rashhworld",
-    description:
-      "Get in touch with Rashhworld for digital marketing and web development needs. Here to help businesses grow.",
-  },
-  alternates: {
-    canonical: `${process.env.SITE_URL}/contact`,
-  },
-};
+  path: "/contact",
+});
 
 const ContactPage = () => {
   return (
@@ -82,7 +76,7 @@ const ContactPage = () => {
           </div>
         </div>
 
-        <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 mb-20">
+        <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8">
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
             Somewhere under the sky
           </h2>

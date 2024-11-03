@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { contactInfo, socialLinks, navLinks } from "../data";
+import { contactInfo, socialLinks, navLinks } from "@/app/lib/data";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -47,7 +47,7 @@ const Footer = () => {
 
             <div>
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-                Services
+                Quick Services
               </h3>
               <ul className="space-y-3">
                 {[
@@ -71,7 +71,7 @@ const Footer = () => {
 
           <div className="col-span-1 md:col-span-2">
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-              Contact Us
+              Quick Contact
             </h3>
             <ul className="space-y-3">
               {contactInfo.map((item) => (
@@ -115,7 +115,7 @@ const Footer = () => {
               <ul className="flex justify-center md:justify-start space-x-6 text-sm text-gray-600 dark:text-gray-300">
                 <li>
                   <Link
-                    href="/privacy"
+                    href="/legal/privacy"
                     className="hover:text-blue-500 dark:hover:text-blue-400"
                   >
                     Privacy Policy
@@ -123,7 +123,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/terms"
+                    href="/legal/terms"
                     className="hover:text-blue-500 dark:hover:text-blue-400"
                   >
                     Terms of Service
@@ -131,7 +131,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/sitemap"
+                    href="/legal/sitemap"
                     className="hover:text-blue-500 dark:hover:text-blue-400"
                   >
                     Sitemap

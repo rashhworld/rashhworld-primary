@@ -1,4 +1,4 @@
-import { contactInfo, socialLinks } from "../data";
+import { contactInfo, socialLinks } from "@/app/lib/data";
 
 export default function JsonLd() {
   const socialUrls = socialLinks.map((link) => link.url);

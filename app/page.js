@@ -1,22 +1,20 @@
 import Link from "next/link";
 import Image from "next/image";
 import { FaArrowRight, FaQuoteLeft } from "react-icons/fa";
-import { featuredServices, featuredProjects, testimonials } from "./data";
-import Skeleton from "./components/Skeleton";
+import {
+  featuredServices,
+  featuredProjects,
+  testimonials,
+} from "@/app/lib/data";
+import { generateMetadata } from "@/app/utils/metadata";
+import Skeleton from "@/app/components/Skeleton";
 
-export const metadata = {
+export const metadata = generateMetadata({
   title: "Rashhworld - Digital Marketing & Web Development Services",
   description:
     "Professional digital marketing, web development, and SEO services to help businesses grow online.",
-  alternates: {
-    canonical: process.env.SITE_URL,
-  },
-  openGraph: {
-    title: "Rashhworld - Digital Marketing & Web Development Services",
-    description:
-      "Professional digital marketing, web development, and SEO services to help businesses grow online.",
-  },
-};
+  path: "/",
+});
 
 const HomePage = () => {
   const getInitials = (name) => {

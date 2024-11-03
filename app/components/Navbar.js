@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { HiMenu, HiX } from "react-icons/hi";
 import { CgMenuGridO } from "react-icons/cg";
-import { navLinks } from "../data";
+import { navLinks } from "@/app/lib/data";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);

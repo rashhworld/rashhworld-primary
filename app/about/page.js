@@ -1,22 +1,16 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { skills } from "../data";
-import Skeleton from "../components/Skeleton";
+import { skills } from "@/app/lib/data";
+import { generateMetadata } from "@/app/utils/metadata";
+import Skeleton from "@/app/components/Skeleton";
 
-export const metadata = {
+export const metadata = generateMetadata({
   title: "About",
   description:
     "Learn about Rashhworld's journey, its mission, and how businesses succeed in the digital world.",
-  alternates: {
-    canonical: `${process.env.SITE_URL}/about`,
-  },
-  openGraph: {
-    title: "About Rashhworld",
-    description:
-      "Learn about Rashhworld's journey, its mission, and how businesses succeed in the digital world.",
-  },
-};
+  path: "/about",
+});
 
 const AboutPage = () => {
   return (

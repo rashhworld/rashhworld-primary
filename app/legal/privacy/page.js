@@ -1,11 +1,11 @@
-export const metadata = {
+import { generateMetadata } from "@/app/utils/metadata";
+
+export const metadata = generateMetadata({
   title: "Privacy Policy",
   description:
     "Privacy policy and data protection information for Rashhworld services.",
-  alternates: {
-    canonical: `${process.env.SITE_URL}/privacy`,
-  },
-};
+  path: "/legal/privacy",
+});
 
 const PrivacyPolicy = () => {
   return (
