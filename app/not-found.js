@@ -27,8 +27,8 @@ const NotFound = () => {
         </div>
 
         <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-xl mx-auto leading-relaxed">
-          Oops! The page you're looking for seems to have vanished into the
-          digital void. Don't worry, you can find your way back home or explore
+          Oops! The page you&apos;re looking for seems to have vanished into the
+          digital void. Don&apos;t worry, you can find your way back home or explore
           other sections of our site.
         </p>
 
