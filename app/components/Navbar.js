@@ -33,6 +33,7 @@ const Navbar = () => {
             <button
               onClick={() => setIsOpen(false)}
               className="md:hidden absolute top-6 right-6 p-2 text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white focus:outline-none transition-all duration-200 hover:rotate-180"
+              aria-label="Close menu"
             >
               <HiX className="h-8 w-8" />
             </button>
@@ -60,6 +61,7 @@ const Navbar = () => {
               onClick={() => setIsOpen(!isOpen)}
               className="inline-flex items-center justify-center py-2 text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white focus:outline-none transition-all duration-200"
               aria-label="Toggle menu"
+              aria-expanded={isOpen}
             >
               <CgMenuGridO className="h-8 w-8 hover:scale-110 transition-transform duration-200" />
             </button>
